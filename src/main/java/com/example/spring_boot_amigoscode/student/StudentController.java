@@ -1,5 +1,6 @@
 package com.example.spring_boot_amigoscode.student;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,6 +15,7 @@ public class StudentController {
 
     public final StudentService studentService;
 
+    @Autowired // dependency injection in the constructor
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
     }
